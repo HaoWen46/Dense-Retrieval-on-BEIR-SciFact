@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Data / artifacts
+data/
+datasets/
+*.zip
+*.tar.gz
+
+# FAISS index files / embeddings
+*.index
+*.faiss
+*.npy
+*.npz
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.venv/
+venv/
+.env
