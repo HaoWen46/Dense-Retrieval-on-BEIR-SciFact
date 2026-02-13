@@ -28,8 +28,7 @@ End-to-end dense retrieval pipeline:
 ## Repository layout
 ```
 dense-retrieval-faiss-beir/
-├── notebooks/
-│ └── dense_retrieval_scifact_faiss.ipynb
+├── dense_retrieval_scifact_faiss.ipynb
 ├── src/
 │ ├── benchmark.py
 │ ├── indexing.py
