@@ -44,9 +44,9 @@ dense-retrieval-faiss-beir/
 ## Cosine similarity via inner product
 
 Embeddings are **L2-normalized**, so:
-
+```
 cosine(a, b) == dot(a, b)
-
+```
 That’s why the FAISS indices use **inner product** (IP):
 
 - `IndexFlatIP`
@@ -57,15 +57,15 @@ That’s why the FAISS indices use **inner product** (IP):
 ## Quickstart (local)
 
 ### Install
-
+```py
 pip install -r requirements.txt
-
+```
 ### Run once (exact vs ANN)
-
+```py
 python -m src.benchmark --index flat --k 10
 python -m src.benchmark --index ivf --k 10 --nlist 256 --nprobe 16
 python -m src.benchmark --index hnsw --k 10 --M 32 --efSearch 64
-
+```
 Output prints a metrics dict including:
 
 - ms/query
@@ -79,17 +79,17 @@ Output prints a metrics dict including:
 ## Sweeps (recommended)
 
 ### IVF sweep: nprobe
-
+```py
 python -m src.benchmark --sweep ivf --k 10 --nlist 256 --sweep_vals 1 2 4 8 16 32 64 \
  --out assets/ivf_sweep.csv \
  --plot assets/ivf_sweep.png
-
+```
 ### HNSW sweep: efSearch
-
+```py
 python -m src.benchmark --sweep hnsw --k 10 --sweep_vals 8 16 32 64 128 256 \
  --out assets/hnsw_sweep.csv \
  --plot assets/hnsw_sweep.png
-
+```
 ---
 
 ## Parameters you’ll tune
@@ -113,7 +113,9 @@ Higher efSearch => better quality, slower queries.
 ## Colab
 
 Open:
+```
 notebooks/dense_retrieval_scifact_faiss.ipynb
+```
 
 It runs end-to-end: download -> embed -> index -> eval -> plots.
 
