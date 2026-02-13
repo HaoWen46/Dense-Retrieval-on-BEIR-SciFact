@@ -1,4 +1,4 @@
-# Dense Retrieval on BEIR SciFact (Colab-ready): FAISS Flat vs IVF vs HNSW
+# Dense Retrieval on BEIR SciFact: FAISS Flat vs IVF vs HNSW
 
 A small, reproducible benchmark for **dense retrieval** using:
 
