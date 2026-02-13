@@ -26,7 +26,7 @@ End-to-end dense retrieval pipeline:
 ---
 
 ## Repository layout
-
+```
 dense-retrieval-faiss-beir/
 ├── notebooks/
 │ └── dense_retrieval_scifact_faiss.ipynb
@@ -37,6 +37,7 @@ dense-retrieval-faiss-beir/
 ├── assets/
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
